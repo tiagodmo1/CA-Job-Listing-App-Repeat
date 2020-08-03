@@ -29,6 +29,10 @@ color:white !important;
 
 }
 
+#example_wrapper
+{
+	margin-bottom:50px;
+}
 
  .modal-header{
 color:white !important;
