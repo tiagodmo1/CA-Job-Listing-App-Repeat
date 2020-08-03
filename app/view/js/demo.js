@@ -16,7 +16,7 @@ $("#submit").prop('disabled', false);
 $("#delete").click(function(){
 var dataId=$("#dataId").val();
 $.ajax({
-            url: 'http://localhost:8080/api/likeanangel/'+dataId,
+            url: 'https://bookartapp.herokuapp.com/api/bookkart/'+dataId,
             type: 'delete',
             dataType: 'json',
              
@@ -51,7 +51,7 @@ var dataJson = {
         };
 
 $.ajax({
-            url: 'https://shrouded-gorge-86216.herokuapp.com/api/likeanangel/'+dataId,
+            url: 'https://bookartapp.herokuapp.com/api/bookkart/'+dataId,
             type: 'put',
             dataType: 'json',
              data: JSON.stringify(dataJson),
@@ -89,7 +89,7 @@ var dataJson = {
 console.log(JSON.stringify(dataJson));
 
 $.ajax({
-            url: 'https://shrouded-gorge-86216.herokuapp.com/api/likeanangel',
+            url: 'https://bookartapp.herokuapp.com/api/bookkart',
             type: 'post',
             dataType: 'json',
              data: JSON.stringify(dataJson),
@@ -123,7 +123,7 @@ $("#example").show();
 $('#table1').DataTable().destroy();
 
   $.ajax({
-    type: "get", url: "https://shrouded-gorge-86216.herokuapp.com/api/likeanangel",
+    type: "get", url: "https://bookartapp.herokuapp.com/api/bookkart",
     success: function (data, text) {
       var table= $('#example').DataTable( {
         "data": data,
@@ -156,7 +156,7 @@ $("#submit").prop('disabled', true);
        
 $("#dataId").val(data2._id);
   $.ajax({
-    type: "get", url: "https://shrouded-gorge-86216.herokuapp.com/api/likeanangel/"+data2._id,
+    type: "get", url: "https://bookartapp.herokuapp.com/api/bookkart/"+data2._id,
     success: function (data, text) {
 
            $("#section").val(data.section);
