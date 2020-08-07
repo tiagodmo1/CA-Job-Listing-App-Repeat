@@ -51,7 +51,7 @@ var dataJson = {
         };
 
 $.ajax({
-            url: 'http://joblistingappnew.herokuapp.com/api/bookkart/'+dataId,
+            url: 'https://joblistingappnew.herokuapp.com/api/bookkart/'+dataId,
             type: 'put',
             dataType: 'json',
              data: JSON.stringify(dataJson),
