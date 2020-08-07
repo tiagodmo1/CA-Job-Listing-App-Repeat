@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>BookKart</title>
+  <title>JobListing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,14 +18,14 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Welcome to BookKart Application</h1>
+  <h1>Welcome to JobListing Application</h1>
   <p>Please Use below features for CRUD Operations</p> 
  <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info" id="callApi">Get All Data</button>
 
 
  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info" id="add" data-toggle="modal" data-target="#myModal">Add New Book</button>
+  <button type="button" class="btn btn-info" id="add" data-toggle="modal" data-target="#myModal">Add New Job</button>
 
   
 
@@ -39,16 +39,16 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-<h4 class="modal-title">List of Books </h4>
+<h4 class="modal-title">List of Jobs</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           
         </div>
         <div class="modal-body">
 <div class="container">
-         <div class="row m-1"><div class="col-sm-3"><b>Book Name</b></div><div class="col-sm-9"><input type="text" class="form-control" id="section"/><input type="hidden" id="dataId"/></div></div>
-<div class="row m-1"><div class="col-sm-3"><b>Subejct</b></div><div class="col-sm-9"><input type="text" class="form-control" id="item"/></div></div>
-<div class="row m-1"><div class="col-sm-3"><b>Price</b></div><div class="col-sm-9"><input type="text" class="form-control" id="price"/></div></div>
-<div class="row m-1" style="display:none;"><div class="col-sm-3"><b>Title</b></div><div class="col-sm-9"><input type="text" class="form-control" id="title" value="test"/></div></div>
+         <div class="row m-1"><div class="col-sm-3"><b>Job Title</b></div><div class="col-sm-9"><input type="text" class="form-control" id="section"/><input type="hidden" id="dataId"/></div></div>
+<div class="row m-1"><div class="col-sm-3"><b>Job Description</b></div><div class="col-sm-9"><input type="text" class="form-control" id="item"/></div></div>
+<div class="row m-1"><div class="col-sm-3"><b>Keywords</b></div><div class="col-sm-9"><input type="text" class="form-control" id="price"/></div></div>
+<div class="row m-1" style=""><div class="col-sm-3"><b>Location</b></div><div class="col-sm-9"><input type="text" class="form-control" id="title" value=""/></div></div>
  </div>
         </div>
         <div class="modal-footer">
@@ -67,10 +67,10 @@
   <table id="example" class="table table-striped table-bordered" style="width:100%;display:none;margin-bottom:40px;" >
         <thead>
             <tr>
-                <th>BookName</th>
-                <th>Subject</th>
-                <th>Price</th>
-                
+                <th>Job Title</th>
+                <th>Job Description</th>
+                <th>Keywords</th>
+                <th>Location</th>
                 <th></th>
                 
             </tr>

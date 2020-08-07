@@ -4,16 +4,17 @@ const BookKart = db.bookkart;
 // Create and Save a new treatments
 exports.create = (req, res) => {
     //request validation
-   /* if (!req.body.title) {
+   if (!req.body.title) {
         res.status(400).send({ message: "Content cannot be empty." });
         return;
-    }*/
+    }
 
     //create a new treatments
     const bookkart = new BookKart({
         section: req.body.section,
         item: req.body.item,
         price: req.body.price,
+		title: req.body.title,
         published: req.body.published ? req.body.published : false
     });
 

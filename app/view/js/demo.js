@@ -51,7 +51,7 @@ var dataJson = {
         };
 
 $.ajax({
-            url: 'https://bookartapp.herokuapp.com/api/bookkart/'+dataId,
+            url: 'http://bookartapp.herokuapp.com/api/bookkart/'+dataId,
             type: 'put',
             dataType: 'json',
              data: JSON.stringify(dataJson),
@@ -133,7 +133,7 @@ $('#table1').DataTable().destroy();
             { "data": "section" },
             { "data": "item" },
             { "data": "price" },
-            
+             { "data": "title" },
 {
         //adds td row for button
       data: null,
