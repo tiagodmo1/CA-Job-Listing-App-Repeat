@@ -6,6 +6,6 @@ mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.bookkart = require("./bookkart.model")(mongoose);
+db.joblisting = require("./joblisting.model")(mongoose);
 
 module.exports = db;

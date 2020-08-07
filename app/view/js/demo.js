@@ -16,7 +16,7 @@ $("#submit").prop('disabled', false);
 $("#delete").click(function(){
 var dataId=$("#dataId").val();
 $.ajax({
-            url: 'https://joblistingappnew.herokuapp.com/api/bookkart/'+dataId,
+            url: 'https://joblistingappnew.herokuapp.com/api/joblisting/'+dataId,
             type: 'delete',
             dataType: 'json',
              
@@ -51,7 +51,7 @@ var dataJson = {
         };
 
 $.ajax({
-            url: 'https://joblistingappnew.herokuapp.com/api/bookkart/'+dataId,
+            url: 'https://joblistingappnew.herokuapp.com/api/joblisting/'+dataId,
             type: 'put',
             dataType: 'json',
              data: JSON.stringify(dataJson),
@@ -89,7 +89,7 @@ var dataJson = {
 console.log(JSON.stringify(dataJson));
 
 $.ajax({
-            url: 'https://joblistingappnew.herokuapp.com/api/bookkart',
+            url: 'https://joblistingappnew.herokuapp.com/api/joblisting',
             type: 'post',
             dataType: 'json',
              data: JSON.stringify(dataJson),
@@ -123,7 +123,7 @@ $("#example").show();
 $('#table1').DataTable().destroy();
 
   $.ajax({
-    type: "get", url: "https://joblistingappnew.herokuapp.com/api/bookkart",
+    type: "get", url: "https://joblistingappnew.herokuapp.com/api/joblisting",
     success: function (data, text) {
       var table= $('#example').DataTable( {
         "data": data,
@@ -156,7 +156,7 @@ $("#submit").prop('disabled', true);
        
 $("#dataId").val(data2._id);
   $.ajax({
-    type: "get", url: "https://joblistingappnew.herokuapp.com/api/bookkart/"+data2._id,
+    type: "get", url: "https://joblistingappnew.herokuapp.com/api/joblisting/"+data2._id,
     success: function (data, text) {
 
            $("#section").val(data.section);

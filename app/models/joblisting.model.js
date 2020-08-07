@@ -2,7 +2,7 @@
  * file that defines the schema for mongoose
  */
 module.exports = mongoose => {
-    const bookkart = mongoose.model(
+    const joblisting = mongoose.model(
         "tiagodb",
         mongoose.Schema(
             {
@@ -16,5 +16,5 @@ module.exports = mongoose => {
       )
     );
   
-    return bookkart;
+    return joblisting;
   };

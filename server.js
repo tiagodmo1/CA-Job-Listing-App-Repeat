@@ -35,11 +35,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('./app/view/', {index: 'index.html'}))
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Like An Angel application." });
+  res.json({ message: "Welcome to Job Listing application." });
 
 });
 
-require("./app/routes/bookkart.routes.js")(app);
+require("./app/routes/joblisting.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

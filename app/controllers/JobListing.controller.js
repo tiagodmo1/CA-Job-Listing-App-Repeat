@@ -1,5 +1,5 @@
 const db = require("../models");
-const BookKart = db.bookkart;
+const JobListing = db.joblisting;
 
 // Create and Save a new treatments
 exports.create = (req, res) => {
@@ -10,7 +10,7 @@ exports.create = (req, res) => {
     }
 
     //create a new treatments
-    const bookkart = new BookKart({
+    const joblisting = new JobListing({
         section: req.body.section,
         item: req.body.item,
         price: req.body.price,
@@ -19,8 +19,8 @@ exports.create = (req, res) => {
     });
 
     //save treatments to the DB
-    bookkart
-        .save(bookkart)
+    joblisting
+        .save(joblisting)
         .then(data => {
             res.send(data);
         })
@@ -37,7 +37,7 @@ exports.findAll = (req, res) => {
     const item = req.query.title;
     let condition = item ? { item: { $regex: new RegExp(item), $options: "i" } } : {};
 
-    BookKart.find(condition)
+    JobListing.find(condition)
         .then(data => {
             res.send(data);
         })
@@ -53,7 +53,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    BookKart.findById(id)
+    JobListing.findById(id)
         .then(data => {
             if (!data)
                 res.status(404).send({ message: "Not found treatment with id " + id });
@@ -76,7 +76,7 @@ exports.update = (req, res) => {
         });
     }
 
-    BookKart.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    JobListing.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
        .then(data => {
             if (!data) {
                 res.status(404).send({
@@ -96,7 +96,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id;
 
-    BookKart.findByIdAndRemove(id)
+    JobListing.findByIdAndRemove(id)
         .then(data => {
         if (!data) {
             res.status(404).send({
@@ -118,7 +118,7 @@ exports.delete = (req, res) => {
 
 // Delete all treatment from the database.
 exports.deleteAll = (req, res) => {
-    BookKart.deleteMany({})
+    JobListing.deleteMany({})
     .then(data => {
     res.send({
         message: `${data.deletedCount} treatments were successfully deleted!`
